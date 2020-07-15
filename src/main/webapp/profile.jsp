@@ -6,7 +6,7 @@
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="partials/navbar.jsp" />
+    <jsp:include page="partials/navbar.jsp" />git
 
     <div class="container">
         <h1>Viewing your profile.</h1>
