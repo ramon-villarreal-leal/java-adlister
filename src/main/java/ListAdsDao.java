@@ -8,6 +8,7 @@ public class ListAdsDao implements Ads {
         if (ads == null) {
             ads = generateAds();
         }
+        System.out.println(ads);
         return ads;
     }
 
@@ -39,4 +40,5 @@ public class ListAdsDao implements Ads {
         ));
         return ads;
     }
+
 }
