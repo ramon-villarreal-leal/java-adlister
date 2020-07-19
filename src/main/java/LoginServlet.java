@@ -12,7 +12,9 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        if(request.getSession().getAttribute("user") != null) {
+        HttpSession session = request.getSession();
+
+        if(session.getAttribute("user") != null) {
             response.sendRedirect("/profile");
             return;
         }
@@ -26,10 +28,11 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         boolean validAttempt = username.equals("admin") && password.equals("password");
+        HttpSession session = request.getSession();
 
         if (validAttempt) {
-            //quick saving under title user == user is the key.
-            request.getSession().setAttribute("user", username);
+            //quick saving under title user == username is the key.
+            session.setAttribute("user", username);
             response.sendRedirect("/profile");
         } else {
             //do not set session client cannot try again if in else statement
