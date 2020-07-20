@@ -8,7 +8,7 @@
         <ul class="nav navbar-nav navbar-right">
             <c:choose>
                 <c:when test="${sessionScope['user'] != null}">
-                <li><a href="/logout"></a>Logout</li>
+                <li><a href="/logout">Logout </a></li>
                 </c:when>
                 <c:otherwise>
                 <li><a href="/login">Login</a></li>
