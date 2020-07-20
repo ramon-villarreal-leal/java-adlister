@@ -15,7 +15,7 @@ public class AdsIndexServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         if(session.getAttribute("user") == null){
-            response.sendRedirect("login");
+            response.sendRedirect("/login");
             return;
         }
 
