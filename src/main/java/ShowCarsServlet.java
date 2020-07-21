@@ -11,8 +11,12 @@ public class ShowCarsServlet extends HttpServlet {
 
 
     @Override
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+
+        System.out.println("request.getSession().getAttribute(\"extracar\") = " + request.getSession().getAttribute("extracar"));
 
         request.setAttribute("cars", DaoFactory.getCarsDao().all());
         request.getRequestDispatcher("/WEB-INF/cars/index.jsp").forward(request,response);

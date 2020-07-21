@@ -18,6 +18,13 @@
             <p>Year: ${car.year}</p>
         </div>
     </c:forEach>
+    <c:if test="${sessionScope.extracar != null}">
+        <div class="col-md-6">
+            <p>Make: ${sessionScope.extracar.make}</p>
+            <p>Model: ${sessionScope.extracar.model}</p>
+            <p>Year: ${sessionScope.extracar.year}</p>
+        </div>
+    </c:if>
 
 </div>
 
