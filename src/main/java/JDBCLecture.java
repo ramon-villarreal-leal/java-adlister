@@ -1,4 +1,6 @@
 import com.mysql.cj.jdbc.Driver;
+import models.Album;
+
 import java.sql.*;
 
 public class JDBCLecture {
