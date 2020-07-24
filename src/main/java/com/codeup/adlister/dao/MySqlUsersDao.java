@@ -29,7 +29,7 @@ public class MySqlUsersDao implements Users {
     @Override
     public User findByUsername(String username) {
         //===============CREATING A PREPARED STATEMENT SET IT TO NULL====
-        PreparedStatement stmt = null;
+        PreparedStatement stmt = null; //====== needs to change to not like=======/
         String sqlQuery = "SELECT * FROM users WHERE username LIKE ?";
         String userInput = "%" + username + "%";
 

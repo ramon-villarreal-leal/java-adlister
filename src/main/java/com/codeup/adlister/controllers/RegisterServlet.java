@@ -42,7 +42,10 @@ public class RegisterServlet extends HttpServlet {
 //        Long userId = DaoFactory.getUsersDao().insert(thisUser);
 //        thisUser.setId(userId);
 //        expecting user object setAttribute is
+        //====== saving user======////
         DaoFactory.getUsersDao().insert(thisUser);
+        //======settting attribute of user to new user object  created "user" is a variable call it whatever you want=======////
+        //========ACTUAL USER OBJECT IS "thisUSer"====/
         request.getSession().setAttribute("user", thisUser);
         response.sendRedirect("/profile");
     }
