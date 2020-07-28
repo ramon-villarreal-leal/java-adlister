@@ -8,7 +8,7 @@ import com.mysql.cj.api.mysqla.result.Resultset;
 import com.mysql.cj.jdbc.Driver;
 
 public class MySqlUsersDao implements Users {
-
+    //instance of connection object that alllows users to have connection to the database
     private Connection connection;
 
     public MySqlUsersDao (Config config) {
@@ -39,6 +39,7 @@ public class MySqlUsersDao implements Users {
             stmt.setString(1, userInput);
 
             stmt.executeQuery();
+            // Actual result set that would give us back the user record // get geenrated keys in mysqlAdsDao gives back ID
             ResultSet rs = stmt.getResultSet();
             rs.next();
             return extractUser(rs);

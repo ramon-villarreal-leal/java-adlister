@@ -31,6 +31,7 @@ public class RegisterServlet extends HttpServlet {
         }
         // TODO: create a new user based off of the submitted information
         //========MORE STREAMLINED WAY OF DOING THINGS==========
+        //WHEN YOU INSERT INTO A DATABASE THE ID AUTO INCREMENTS
         User thisUser = new User(username,email,password);
 
         //============SETTING A USERNAME BASED ON SUBMITTED INFORMATION===========
@@ -43,6 +44,8 @@ public class RegisterServlet extends HttpServlet {
 //        thisUser.setId(userId);
 //        expecting user object setAttribute is
         //====== saving user======////
+
+        //ADD NEW USER TO DATABASE REDIRECT BELOW
         DaoFactory.getUsersDao().insert(thisUser);
         //======settting attribute of user to new user object  created "user" is a variable call it whatever you want=======////
         //========ACTUAL USER OBJECT IS "thisUSer"====/
